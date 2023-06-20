@@ -1,0 +1,24 @@
+.wordContainer{
+  width: 50%;
+  display: flex;
+  flex-wrap: wrap;
+  text-transform: uppercase;
+  justify-content: space-around;
+  gap: 2rem;
+  font-size: 2rem;
+}
+
+.letterContainer{
+  border-bottom: 5px solid black;
+  width: 30px;
+}
+
+
+.letterContainer__letter{
+  text-align: center;
+}
+
+
+.letterContainer__letter--hidden{
+  visibility: hidden;
+}
