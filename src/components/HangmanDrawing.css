@@ -47,6 +47,74 @@
   border-radius: 5px;
 }
 
+.structure__bodyparts{
+  width: 50%;
+  height: 70%;
+  position: absolute;
+  border: 2px solid rgba(0,0,0,0.3);
+  right: -22%;
+  top: 20%;
+}
+
+.structure__head{
+  width: 50%;
+  height: 30%;
+  position: absolute;
+  top: 0;
+  left: 28%;
+  border: 3px solid aliceblue;
+  border-radius: 50%;
+}
+
+.structure__body{
+  width: 3px;
+  height: 40%;
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  background-color: aliceblue;
+}
+
+.structure__rightArm{
+  width: 35%;
+  height: 3px;
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  background-color: aliceblue;
+  transform: rotate(-30deg);
+}
+
+.structure__leftArm{
+  width: 35%;
+  height: 3px;
+  position: absolute;
+  top: 30%;
+  left: 17%;
+  background-color: aliceblue;
+  transform: rotate(30deg);
+}
+
+.structure__rightleg{
+  width: 35%;
+  height: 3px;
+  position: absolute;
+  top: 75%;
+  left: 50%;
+  background-color: aliceblue;
+  transform: rotate(30deg);
+}
+
+.structure__leftleg{
+  width: 35%;
+  height: 3px;
+  position: absolute;
+  top: 75%;
+  left: 17%;
+  background-color: aliceblue;
+  transform: rotate(-30deg);
+}
+
 
 
 @media (max-width:1200px){
@@ -75,4 +143,6 @@
     width: 60%;
     height: 250px;
   }
+
+  
 }
