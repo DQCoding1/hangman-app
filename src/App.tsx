@@ -1,11 +1,21 @@
 import './App.css'
+import { useState } from "react"
+import { wordList } from './wordList'
+import HangmanDrawing from './components/HangmanDrawing'
+
 
 function App() {
+  const [wordToFind, setWordToFind] = useState(() => {
+    return wordList[Math.round(Math.random() * wordList.length)]
+  })
+
+  const [guessedWord, setGuessedWord] = useState<string[]>([])
+
+
   return (
-    <div>
-      asdads
-      <h1>anudebclaeuhcaeu</h1>
-    </div>
+    <main className='app'>
+      <HangmanDrawing />
+    </main>
   )
 }
 

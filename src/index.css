@@ -8,7 +8,7 @@
 }
 
 body{
-  background: linear-gradient(to bottom right, rgb(75, 75, 75), rgb(25, 25, 25));
+  background: linear-gradient(to bottom right, rgb(55, 55, 55), rgb(25, 25, 25));
   color: white;
   width: 100%;
   min-height: 100vh;

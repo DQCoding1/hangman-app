@@ -1,0 +1,78 @@
+.structure{
+  position: relative;
+  width: 20%;
+  height: 350px;
+}
+
+.structure__bottomBar{
+  width: 80%;
+  height: 3%;
+  position: absolute;
+  content: "";
+  bottom: 0;
+  left: 12%;
+  background-color: aliceblue;
+  border-radius: 5px;
+}
+
+.structure__middleBar{
+  width: 5%;
+  height: 100%;
+  position: absolute;
+  content: "";
+  left: 50%;
+  background-color: aliceblue;
+  border-radius: 5px;
+}
+
+.structure__topBar{
+  width: 50%;
+  height: 3%;
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 50%;
+  background-color: aliceblue;
+  border-radius: 5px;
+}
+
+.structure__hangBar{
+  width: 5%;
+  height: 20%;
+  position: absolute;
+  content: "";
+  right: 0;
+  top: 0;
+  background-color: aliceblue;
+  border-radius: 5px;
+}
+
+
+
+@media (max-width:1200px){
+  .structure{
+    width: 30%;
+    height: 300px;
+  }
+}
+@media (max-width:900px){
+  .structure{
+    width: 40%;
+    height: 300px;
+  }
+}
+@media (max-width:600px){
+  .structure{
+    width: 50%;
+    height: 300px;
+  }
+}
+
+@media (max-width:550px){
+  .structure{
+    align-self: start;
+    margin-left: 3rem;
+    width: 60%;
+    height: 250px;
+  }
+}
