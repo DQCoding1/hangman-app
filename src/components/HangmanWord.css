@@ -22,3 +22,10 @@
 .letterContainer__letter--hidden{
   visibility: hidden;
 }
+
+
+@media (max-width:500px){
+  .wordContainer{
+    width: 80%;
+  }
+}

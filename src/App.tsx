@@ -1,8 +1,9 @@
 import './App.css'
 import { useState } from "react"
-import { wordList } from './components/data/wordList'
+import { wordList } from './data/wordList'
 import HangmanDrawing from './components/HangmanDrawing'
 import HangmanWord from './components/HangmanWord'
+import Keyboard from './components/Keyboard'
 
 
 function App() {
@@ -17,6 +18,7 @@ function App() {
     <main className='app'>
       <HangmanDrawing />
       <HangmanWord />
+      <Keyboard />
     </main>
   )
 }
