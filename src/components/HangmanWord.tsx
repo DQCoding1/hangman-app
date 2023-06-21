@@ -1,16 +1,18 @@
 import "./HangmanWord.css";
 
-const HangmanWord = () => {
-  const wordToFind = "environment";
-  const guessedLetter = ["e", "r"];
+type HangmanWordProps = {
+  guessedLetters: string[],
+  wordToFind: string 
+}
 
+const HangmanWord = ({ guessedLetters , wordToFind }: HangmanWordProps) => {
   return (
     <div className="wordContainer">
       {wordToFind.split("").map((item, index) => (
         <div className="letterContainer" key={index}>
           <div
             className={
-              guessedLetter.includes(item)
+              guessedLetters.includes(item)
                 ? "letterContainer__letter"
                 : "letterContainer__letter--hidden"
             }
