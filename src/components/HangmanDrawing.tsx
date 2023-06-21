@@ -21,7 +21,7 @@ const bodyparts = {
   )
 }
 
-const bodyPartsArr = Object.values(bodyparts)
+export const bodyPartsArr = Object.values(bodyparts)
 
 type HangmanDrawingProps = {
   numberOfIncorrectGuesses: number 

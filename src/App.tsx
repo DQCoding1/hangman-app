@@ -1,9 +1,10 @@
 import "./App.css";
 import { useEffect, useState } from "react";
 import { wordList } from "./data/wordList";
-import HangmanDrawing from "./components/HangmanDrawing";
+import HangmanDrawing, { bodyPartsArr } from "./components/HangmanDrawing";
 import HangmanWord from "./components/HangmanWord";
 import Keyboard from "./components/Keyboard";
+
 
 function App() {
   const [wordToFind] = useState(() => {
@@ -13,9 +14,11 @@ function App() {
   const incorrectLetters = guessedLetters.filter(
     (item) => !wordToFind.includes(item)
   );
+  const isWinner = wordToFind.split("").every(item => guessedLetters.includes(item))
+  const isLoser = guessedLetters.length > bodyPartsArr.length
 
   const addGuessedLetter = (key: string) => {
-    if (guessedLetters.includes(key)) return;
+    if (guessedLetters.includes(key) || isLoser) return;
     setGuessedLetters((currentLetters) => [...currentLetters, key]);
   };
 
@@ -38,10 +41,13 @@ function App() {
 
   return (
     <main className="app">
+      {isWinner && "You won 🎉, try again"}
+      {isLoser && "You Loose 😒, try again"}
       <HangmanDrawing numberOfIncorrectGuesses={incorrectLetters.length} />
-      <HangmanWord guessedLetters={guessedLetters} wordToFind={wordToFind} />
+      <HangmanWord guessedLetters={guessedLetters} wordToFind={wordToFind} reveal={isLoser}/>
       <Keyboard
         incorrectLetter={incorrectLetters}
+        disable={isWinner || isLoser}
         correctLetters={guessedLetters.filter(item => wordToFind.includes(item))}
         addGuesedLetters={addGuessedLetter}
       />

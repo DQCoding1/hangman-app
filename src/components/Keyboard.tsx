@@ -2,13 +2,17 @@ import { KEYS } from "../data/alphabet";
 import "./Keyboard.css";
 
 type KeyboardProps = {
-  incorrectLetter: string[];
-  correctLetters: string[];
-  addGuesedLetters: (key: string) => void;
+  incorrectLetter: string[],
+  correctLetters: string[],
+  disable : boolean,
+  addGuesedLetters: (key: string) => void
 };
+
+
 const Keyboard = ({
   incorrectLetter,
   correctLetters,
+  disable,
   addGuesedLetters,
 }: KeyboardProps) => {
   return (
@@ -26,7 +30,7 @@ const Keyboard = ({
               key={index}
               onClick={() => addGuesedLetters(item)}
               className="keyboard__button"
-              disabled={isLetterCorrect || isLetterIncorrect}
+              disabled={isLetterCorrect || isLetterIncorrect || disable}
             >
               {item}
             </button>
