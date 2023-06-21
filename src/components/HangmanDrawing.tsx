@@ -21,7 +21,14 @@ const bodyparts = {
   )
 }
 
-const HangmanDrawing = () => {
+const bodyPartsArr = Object.values(bodyparts)
+
+type HangmanDrawingProps = {
+  numberOfIncorrectGuesses: number 
+}
+
+
+const HangmanDrawing = ({ numberOfIncorrectGuesses }: HangmanDrawingProps) => {
   return (
     <div className="structure">
       <div className="structure__topBar"></div>
@@ -29,12 +36,13 @@ const HangmanDrawing = () => {
       <div className="structure__middleBar"></div>
       <div className="structure__bottomBar"></div>
       <div className="structure__bodyparts">
-        {bodyparts.head}
+        {/* {bodyparts.head}
         {bodyparts.body}
         {bodyparts.rightArm}
         {bodyparts.leftArm}
         {bodyparts.rightleg}
-        {bodyparts.leftleg}
+        {bodyparts.leftleg} */}
+      {bodyPartsArr.slice(0, numberOfIncorrectGuesses)}
       </div>
     </div>
   )

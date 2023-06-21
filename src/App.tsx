@@ -8,15 +8,16 @@ import Keyboard from './components/Keyboard'
 
 function App() {
   const [wordToFind, setWordToFind] = useState(() => {
+    return "sdst"
     return wordList[Math.round(Math.random() * wordList.length)]
   })
 
-  const [guessedWord, setGuessedWord] = useState<string[]>([])
-
+  const [guessedLetters, setGuessedLetters] = useState<string[]>(["g", "t", "r"])
+  const incorrectLetters = guessedLetters.filter(item => !wordToFind.includes(item))
 
   return (
     <main className='app'>
-      <HangmanDrawing />
+      <HangmanDrawing numberOfIncorrectGuesses={incorrectLetters.length}/>
       <HangmanWord />
       <Keyboard />
     </main>

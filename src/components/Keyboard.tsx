@@ -1,6 +1,6 @@
 import { KEYS } from "../data/alphabet"
 import "./Keyboard.css"
-const a = false
+
 const Keyboard = () => {
   return (
     <ul className="keyboard">
